@@ -1,7 +1,23 @@
+import bcrypt from 'bcryptjs'
+
 const data = {
+    users: [
+      {
+        name:'Jackie',
+        email:'admin@example.com',
+        password: bcrypt.hashSync('1234', 8),
+        isAdmin: true,
+      },
+      {
+        name:'Jo',
+        email:'user@example.com',
+        password: bcrypt.hashSync('1234', 8),
+        isAdmin: false, 
+      },
+    ],
     products: [
       {
-        _id: '1',
+        //Had to remove _id:1
         name: 'Business Book of the Year 2020',
         category: 'Books',
         image: '/images/book.jpg',
@@ -13,7 +29,6 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '2',
         name: 'Lamp',
         category: 'Furniture',
         image: '/images/lamp.jpg',
@@ -25,7 +40,6 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '3',
         name: 'Bedside Table',
         category: 'Furniture',
         image: '/images/bedsideTable.jpg',
@@ -37,7 +51,6 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '4',
         name: 'Coffee Maker',
         category: 'Electronics',
         image: '/images/keurig.jpg',
@@ -49,7 +62,6 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '5',
         name: 'Headphones',
         category: 'Electronics',
         image: '/images/headphones.jpg',
@@ -61,7 +73,6 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '6',
         name: 'Desk',
         category: 'Furniture',
         image: '/images/desk.jpg',
